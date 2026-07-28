@@ -9,6 +9,7 @@ ISSUE_TEMPLATE_DIR = ROOT.join(".github", "ISSUE_TEMPLATE").freeze
 FORM_NAMES = %w[bug.yml docs.yml feature.yml maintenance.yml question.yml].freeze
 CONFIG_NAME = "config.yml"
 CONTROL_TYPES = %w[checkboxes dropdown input markdown textarea].freeze
+YAML_PARSE_ERROR = Object.new.freeze
 
 class Validator
   attr_reader :errors
@@ -40,7 +41,7 @@ def load_yaml(path, validator)
   )
 rescue Psych::Exception => e
   validator.error(path, "invalid YAML: #{e.message.lines.first.strip}")
-  nil
+  YAML_PARSE_ERROR
 end
 
 def validate_string_list(value, path, field, validator)
@@ -132,7 +133,7 @@ end
 
 def validate_form(path, validator)
   form = load_yaml(path, validator)
-  return unless form
+  return if form.equal?(YAML_PARSE_ERROR)
 
   unless form.is_a?(Hash)
     validator.error(path, "top level must be a mapping")
@@ -165,7 +166,7 @@ end
 
 def validate_config(path, validator)
   config = load_yaml(path, validator)
-  return unless config
+  return if config.equal?(YAML_PARSE_ERROR)
 
   unless config.is_a?(Hash)
     validator.error(path, "top level must be a mapping")
@@ -322,7 +323,7 @@ end
 validator = Validator.new
 
 expected_files = (FORM_NAMES + [CONFIG_NAME]).sort
-actual_files = Dir.glob(ISSUE_TEMPLATE_DIR.join("*.yml").to_s).map { |path| File.basename(path) }.sort
+actual_files = ISSUE_TEMPLATE_DIR.children.map { |path| path.basename.to_s }.sort
 unless actual_files == expected_files
   validator.error(
     ISSUE_TEMPLATE_DIR,
