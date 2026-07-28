@@ -19,5 +19,8 @@ define their own local versions.
 Repository-specific CI commands, labels, CODEOWNERS, release automation,
 secrets, and required checks remain in each project.
 
+This repository's own CODEOWNERS and validation workflow govern changes here
+only; GitHub does not inherit them as community-health defaults.
+
 Changes to these defaults follow
 [Issue → branch → pull request → CI → independent review → squash](CONTRIBUTING.md).

@@ -89,7 +89,9 @@ therefore provide the complete set they intend contributors to use.
 Organization-wide issue and pull request templates require this `.github`
 repository to remain public. Repository-specific CI workflows, ownership files,
 labels, rulesets, release automation, and secrets belong in the affected
-repository and are intentionally not defined here.
+repository and are not supplied as organization defaults here. This governance
+repository may define its own validation workflow and ownership file; those
+apply only to this repository.
 
 ## Controlled exceptions
 
