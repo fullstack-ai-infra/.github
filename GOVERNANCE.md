@@ -91,6 +91,49 @@ repository to remain public. Repository-specific CI workflows, ownership files,
 labels, rulesets, release automation, and secrets belong in the affected
 repository and are intentionally not defined here.
 
+## Controlled exceptions
+
+Exceptions exist to make the baseline operable, not optional. Use the narrowest
+applicable case and retain an auditable record.
+
+### Repository bootstrap
+
+An organization owner may create a repository and seed its default branch with
+the minimum files required to enable issues, protections, and the first pull
+request. They must then open a bootstrap issue, add another reviewer with the
+necessary access, protect the default branch, and move all subsequent work
+through the normal workflow. Bootstrap does not authorize product development
+or repeated direct pushes.
+
+### Automated dependency updates
+
+A trusted dependency bot may use its update record or linked public advisory as
+the tracking issue instead of waiting for a separate manually triaged issue.
+The pull request still requires repository CI, an independent human review, and
+the normal merge protections. Automation cannot approve or merge its own
+change.
+
+### Private and emergency security work
+
+A private security advisory is the tracking issue for embargoed work. Use a
+private branch or security fork, minimize the diff, and preserve independent
+review and tests whenever doing so does not increase harm.
+
+An organization owner may invoke break-glass only to stop active exploitation,
+prevent imminent data loss, or restore a disabled security control when the
+normal delay would materially increase harm. The owner must record the
+authorization in the private advisory, limit the bypass to the exact change and
+time window, restore protections immediately, and open a sanitized
+post-incident record. A non-author must review the deployed diff as soon as it
+is safe, even if that review could not precede the emergency change.
+
+### Single-maintainer projects
+
+A repository with one maintainer may ask an organization owner or another
+qualified organization maintainer for independent review. Except for the
+one-time bootstrap and break-glass cases above, the absence of a second
+reviewer is a staffing blocker, not permission to self-approve.
+
 ## Repository lifecycle
 
 Creating, transferring, archiving, or deleting an organization repository

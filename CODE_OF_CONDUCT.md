@@ -37,20 +37,24 @@ where someone is representing an organization project.
 
 ## Reporting and enforcement
 
-Report conduct concerns privately through the confidential contact path named
-in the affected repository's security policy and begin the title with
-`CONDUCT:`. If no private path is available, ask a repository maintainer or
-organization owner for a private contact channel without including sensitive
-details in the public request.
+Report conduct concerns through the organization's
+[confidential reporting inbox](https://github.com/fullstack-ai-infra/.github/security/advisories/new)
+and begin the title with `CONDUCT:`. This repository's private reporting
+feature is intentionally enabled as the organization fallback; a report does
+not need to describe a software vulnerability.
 
 Include relevant links, dates, context, and the outcome you need. Do not publish
 sensitive evidence.
 
-Maintainers will handle reports as confidentially as reasonably possible.
-Anyone named in a report must recuse themselves from handling it. Enforcement
-may include a private warning, removal of content, a temporary interaction ban,
-or a permanent ban, depending on impact and pattern of behavior. Retaliation is
-itself a violation.
+Organization owners handle these reports as confidentially as reasonably
+possible. Anyone named in a report must recuse themselves from handling it. If
+every person with access to the inbox has a conflict, use GitHub Support for
+conduct on GitHub and an appropriate trusted authority for an immediate safety
+threat; do not disclose the report publicly merely to obtain a response.
+
+Enforcement may include a private warning, removal of content, a temporary
+interaction ban, or a permanent ban, depending on impact and pattern of
+behavior. Retaliation is itself a violation.
 
 Organization owners and repository maintainers are responsible for clarifying
 and enforcing these standards and may remove contributions or access when

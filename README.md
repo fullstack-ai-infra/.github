@@ -11,6 +11,8 @@ define their own local versions.
   lifecycle.
 - [`SECURITY.md`](SECURITY.md), [`SUPPORT.md`](SUPPORT.md), and
   [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) provide default community routes.
+- [`LICENSE`](LICENSE) licenses this governance repository under Apache-2.0; it
+  is not inherited as another repository's project license.
 - [`.github/ISSUE_TEMPLATE`](.github/ISSUE_TEMPLATE) and
   [`PULL_REQUEST_TEMPLATE.md`](PULL_REQUEST_TEMPLATE.md) provide default forms.
 

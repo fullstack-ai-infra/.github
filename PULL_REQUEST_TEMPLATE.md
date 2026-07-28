@@ -1,6 +1,6 @@
-## Tracking issue
+## Tracking record
 
-<!-- Use `Closes` when this PR completes the issue; use `Refs` when it is one part of a larger issue. -->
+<!-- Normally use `Closes` when this PR completes an issue, or `Refs` when it is one part of a larger issue. For a controlled automation or security exception, replace the line below with the applicable update record or advisory reference. Never expose embargoed details in a public PR. -->
 
 Closes #
 
@@ -10,7 +10,7 @@ Closes #
 
 ## Acceptance criteria
 
-<!-- Copy the issue's acceptance criteria and link each one to implementation or evidence. -->
+<!-- Copy the tracking record's acceptance criteria and link each one to implementation or evidence. -->
 
 | Acceptance criterion | Status | Implementation / evidence |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Closes #
 
 ## Author checklist
 
-- [ ] A maintainer confirmed that the linked issue was ready before implementation began.
+- [ ] A maintainer confirmed that the linked issue or tracking record was ready before implementation began, or the automation was pre-authorized under `GOVERNANCE.md`.
 - [ ] This branch was created from an up-to-date default branch and contains no unrelated changes.
 - [ ] I ran the repository's applicable tests, lint, type checks, builds, coverage, and security checks.
 - [ ] I added a regression test for a bug fix, or explained why one is impractical.

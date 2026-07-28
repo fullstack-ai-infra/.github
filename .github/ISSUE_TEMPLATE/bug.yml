@@ -96,13 +96,11 @@ body:
     id: evidence
     attributes:
       label: Current evidence level
-      description: Choose the strongest level fully supported by this report.
+      description: Choose the strongest intake level supported by this report. Maintainers assign E3 after independent reproduction and E4 after verifying the resolution.
       options:
         - "E0 — Unreviewed: evidence has not been assessed"
         - "E1 — Report: a clear claim and supporting artifacts are available"
         - "E2 — Source: source-level evidence identifies the relevant path or likely cause"
-        - "E3 — Reproduced: the behavior is independently reproducible"
-        - "E4 — End to end: the resolution is independently verified"
     validations:
       required: true
 

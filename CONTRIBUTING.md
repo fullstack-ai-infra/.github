@@ -34,6 +34,10 @@ Every repository change follows this sequence:
 Do not use a public issue for embargoed or suspected security vulnerabilities.
 Follow [SECURITY.md](SECURITY.md).
 
+The narrow bootstrap, automation, and emergency exceptions are defined in
+[GOVERNANCE.md](GOVERNANCE.md). They require explicit records and never excuse
+invented evidence, hidden changes, or permanent protection bypasses.
+
 ## Issues
 
 A ready issue contains:
@@ -83,8 +87,11 @@ Never invent test output, coverage, benchmark data, or review evidence.
 
 A review-ready pull request must:
 
-- use `Closes #<number>` when it completes the issue, or `Refs #<number>` when
-  it is one part of a larger issue;
+- identify its tracking record: normally use `Closes #<number>` when it
+  completes an issue, or `Refs #<number>` when it is one part of a larger
+  issue; a controlled exception from [GOVERNANCE.md](GOVERNANCE.md) may instead
+  link the applicable automation record or security advisory without exposing
+  embargoed details;
 - describe what changed, why, and what remains out of scope;
 - map implementation and evidence to acceptance criteria;
 - include a validation ledger with expected and actual results;
