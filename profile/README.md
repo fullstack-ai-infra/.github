@@ -11,14 +11,15 @@ protocols, and evidence-backed engineering.
 
 ### [mem](https://github.com/fullstack-ai-infra/mem)
 
-A portable, self-hosted memory plane for AI agents. People and agents can keep
-source files, structured memories, task checkpoints, and feedback in one
-user-owned system, then use the same core through API, MCP, CLI, and UI.
+Today, `mem` is an open, self-hosted system for storing user-owned source
+files, searching them with natural language, and recording relationships
+between them.
 
-- **Portable:** move context across agents, sessions, devices, and deployments.
-- **Traceable:** return evidence and source material with recalled context.
-- **Controllable:** support feedback, archive, restore, export, and forgetting.
-- **Model-independent:** keep the memory layer separate from the agent runtime.
+Our direction is a portable, self-hosted memory plane for AI agents. Structured
+memories, task checkpoints, feedback, archive and restore, export, and
+forgetting are future capabilities under development in
+[mem #11](https://github.com/fullstack-ai-infra/mem/pull/11), which remains in
+review.
 
 [Explore mem](https://github.com/fullstack-ai-infra/mem) ·
 [Read the product spec](https://github.com/fullstack-ai-infra/mem/blob/main/SPEC.md) ·
