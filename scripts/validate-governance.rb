@@ -8,6 +8,15 @@ ROOT = Pathname.new(File.expand_path("..", __dir__)).freeze
 ISSUE_TEMPLATE_DIR = ROOT.join(".github", "ISSUE_TEMPLATE").freeze
 FORM_NAMES = %w[bug.yml docs.yml feature.yml maintenance.yml question.yml].freeze
 CONFIG_NAME = "config.yml"
+REQUIRED_FILES = %w[
+  CODE_OF_CONDUCT.md
+  CONTRIBUTING.md
+  GOVERNANCE.md
+  PULL_REQUEST_TEMPLATE.md
+  SECURITY.md
+  SUPPORT.md
+  profile/README.md
+].freeze
 CONTROL_TYPES = %w[checkboxes dropdown input markdown textarea].freeze
 YAML_PARSE_ERROR = Object.new.freeze
 
@@ -200,6 +209,20 @@ def validate_config(path, validator)
   end
 end
 
+def validate_required_files(validator)
+  REQUIRED_FILES.each do |name|
+    path = ROOT.join(name)
+    unless path.file?
+      validator.error(path, "file is missing")
+      next
+    end
+
+    unless validator.nonempty_string?(path.read)
+      validator.error(path, "file must not be empty")
+    end
+  end
+end
+
 def destination_token(raw)
   value = raw.strip
   if value.start_with?("<")
@@ -292,7 +315,14 @@ def markdown_destinations(path)
 end
 
 def validate_markdown_links(validator)
-  Dir.glob(ROOT.join("**", "*.md").to_s).sort.each do |filename|
+  markdown_files = Dir.glob(
+    ROOT.join("**", "*.md").to_s,
+    File::FNM_DOTMATCH
+  ).reject do |filename|
+    Pathname.new(filename).relative_path_from(ROOT).each_filename.first == ".git"
+  end
+
+  markdown_files.sort.each do |filename|
     path = Pathname.new(filename)
     markdown_destinations(path).each do |destination, line_number|
       next if destination.empty? || destination.start_with?("#", "/", "//")
@@ -323,7 +353,12 @@ end
 validator = Validator.new
 
 expected_files = (FORM_NAMES + [CONFIG_NAME]).sort
-actual_files = ISSUE_TEMPLATE_DIR.children.map { |path| path.basename.to_s }.sort
+if ISSUE_TEMPLATE_DIR.directory?
+  actual_files = ISSUE_TEMPLATE_DIR.children.map { |path| path.basename.to_s }.sort
+else
+  validator.error(ISSUE_TEMPLATE_DIR, "directory is missing")
+  actual_files = []
+end
 unless actual_files == expected_files
   validator.error(
     ISSUE_TEMPLATE_DIR,
@@ -338,10 +373,14 @@ end
 
 config_path = ISSUE_TEMPLATE_DIR.join(CONFIG_NAME)
 config_path.exist? ? validate_config(config_path, validator) : validator.error(config_path, "file is missing")
+validate_required_files(validator)
 validate_markdown_links(validator)
 
 if validator.errors.empty?
-  puts "Validated #{FORM_NAMES.length} issue forms, issue template config, and local Markdown links."
+  puts(
+    "Validated #{FORM_NAMES.length} issue forms, issue template config, " \
+    "#{REQUIRED_FILES.length} required files, and local Markdown links."
+  )
   exit 0
 end
 

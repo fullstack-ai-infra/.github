@@ -46,11 +46,16 @@ not need to describe a software vulnerability.
 Include relevant links, dates, context, and the outcome you need. Do not publish
 sensitive evidence.
 
-Organization owners handle these reports as confidentially as reasonably
-possible. Anyone named in a report must recuse themselves from handling it. If
-every person with access to the inbox has a conflict, use GitHub Support for
-conduct on GitHub and an appropriate trusted authority for an immediate safety
-threat; do not disclose the report publicly merely to obtain a response.
+Organization owner `PeterGuy326` is currently the sole reader of this inbox.
+Until a second independent handler with two-factor authentication is appointed,
+a report involving that handler cannot be handled independently by the
+organization. For conduct on GitHub, use GitHub's
+[Report Abuse or Support process](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam)
+instead. Contact an appropriate trusted authority for an immediate safety
+threat, and do not disclose the report publicly merely to obtain a response.
+
+After a second independent handler is appointed, anyone named in a report must
+recuse themselves from handling it.
 
 Enforcement may include a private warning, removal of content, a temporary
 interaction ban, or a permanent ban, depending on impact and pattern of

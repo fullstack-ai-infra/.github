@@ -83,6 +83,11 @@ requesting review:
 
 Never invent test output, coverage, benchmark data, or review evidence.
 
+When adding, removing, or renaming an organization issue form, update the
+`FORM_NAMES` allowlist in `scripts/validate-governance.rb` in the same pull
+request. The validator intentionally rejects unlisted forms so changes to the
+inherited template set are explicit.
+
 ## Pull requests
 
 A review-ready pull request must:

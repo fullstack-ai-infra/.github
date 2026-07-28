@@ -59,6 +59,22 @@ Organization-wide policy changes require:
 Private security matters use a repository security advisory until coordinated
 disclosure is safe.
 
+## Confidential intake
+
+GitHub provides repository-scoped private vulnerability reporting, but this
+organization does not yet have a separate general-purpose confidential conduct
+inbox. The `.github` repository's private advisory form is therefore shared as
+the temporary confidential intake route. A `CONDUCT:` title prefix separates
+conduct reports from vulnerability reports; using the same transport does not
+make a conduct report a vulnerability.
+
+Organization owner `PeterGuy326` is currently the sole confidential handler.
+Until a second independent handler with two-factor authentication is appointed,
+the organization cannot independently handle a report involving that owner.
+For conduct on GitHub, reporters should use GitHub's
+[Report Abuse or Support process](https://docs.github.com/en/communities/maintaining-your-safety-on-github/reporting-abuse-or-spam).
+The recusal requirement begins once a second independent handler is in place.
+
 ## Organization defaults and repository overrides
 
 This public `.github` repository supplies default community health files to
