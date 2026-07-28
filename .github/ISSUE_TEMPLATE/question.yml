@@ -1,0 +1,43 @@
+name: Question
+description: Ask a focused usage, design, or contribution question
+title: "[Question] "
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched the documentation and open and closed issues first.
+          required: true
+        - label: This question does not disclose a vulnerability or private data.
+          required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask one focused question and state the answer or decision you need.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain your goal, relevant environment, and what you already tried.
+    validations:
+      required: true
+
+  - type: input
+    id: component
+    attributes:
+      label: Repository area
+      description: Name the component or documentation area closest to the question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting details
+      description: Add sanitized examples, logs, screenshots, or source references when useful.

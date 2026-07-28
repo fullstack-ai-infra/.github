@@ -1,0 +1,121 @@
+name: Bug report
+description: Report a reproducible defect or regression
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Do not disclose vulnerabilities here; use the affected repository's Security tab.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched open and closed issues for duplicates.
+          required: true
+        - label: I removed credentials, personal data, and private content from this report.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the observed defect in one or two sentences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest deterministic sequence, including sanitized inputs.
+      placeholder: |
+        1. Configure ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: Release, tag, or commit identifier
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant platform, architecture, runtime, deployment, and configuration details.
+    validations:
+      required: true
+
+  - type: input
+    id: component
+    attributes:
+      label: Affected component
+      description: Name the smallest repository area that owns the behavior.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Proposed severity
+      description: Maintainers make the final classification.
+      options:
+        - "S0 — Critical: catastrophic impact, irreversible data loss, or widespread outage"
+        - "S1 — High: major capability unusable or broad impact with no practical workaround"
+        - "S2 — Medium: meaningful but limited impact, or a workaround exists"
+        - "S3 — Low: minor, cosmetic, or narrow impact"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Current evidence level
+      description: Choose the strongest level fully supported by this report.
+      options:
+        - "E0 — Unreviewed: evidence has not been assessed"
+        - "E1 — Report: a clear claim and supporting artifacts are available"
+        - "E2 — Source: source-level evidence identifies the relevant path or likely cause"
+        - "E3 — Reproduced: the behavior is independently reproducible"
+        - "E4 — End to end: the resolution is independently verified"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence_detail
+    attributes:
+      label: Evidence
+      description: Add sanitized logs, screenshots, traces, or a minimal example.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Include regression range, workarounds, or related issues when known.
