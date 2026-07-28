@@ -1,11 +1,29 @@
-# fullstack-ai-infra
+# Fullstack AI Infrastructure
 
-Open foundations for building, running, and operating AI systems end to end.
+Open, self-hostable building blocks for reliable AI agents.
 
-We steward infrastructure that is composable, observable, secure by default,
-and practical to operate. Projects may solve different parts of the stack, but
-they share a commitment to open collaboration, portable interfaces, and
-evidence-backed engineering.
+We build the infrastructure between an AI model and a production system:
+durable context, portable interfaces, and the operational foundations needed
+to keep agents useful over time. Our work prioritizes user-owned data, open
+protocols, and evidence-backed engineering.
+
+## Projects
+
+### [mem](https://github.com/fullstack-ai-infra/mem)
+
+Today, `mem` is an open, self-hosted system for storing user-owned source
+files, searching them with natural language, and recording relationships
+between them.
+
+Our direction is a portable, self-hosted memory plane for AI agents. Structured
+memories, task checkpoints, feedback, archive and restore, export, and
+forgetting are future capabilities under development in
+[mem #11](https://github.com/fullstack-ai-infra/mem/pull/11), which remains in
+review.
+
+[Explore mem](https://github.com/fullstack-ai-infra/mem) ·
+[Read the product spec](https://github.com/fullstack-ai-infra/mem/blob/main/SPEC.md) ·
+[Run it locally](https://github.com/fullstack-ai-infra/mem/blob/main/docs/RUN_LOCAL.md)
 
 ## How we work
 
@@ -13,7 +31,8 @@ evidence-backed engineering.
 - Make changes through issues and pull requests.
 - Validate claims with reproducible evidence.
 - Require passing checks and review by someone other than the author.
-- Prefer small, reversible changes and transparent decisions.
+- Prefer small, reviewable changes and transparent decisions.
+- Keep shipped capabilities clearly separated from future work.
 
 ## Get involved
 
@@ -35,3 +54,6 @@ Organization-wide defaults are documented in:
 
 A repository's local policy supplies project-specific instructions while
 preserving the organization baseline.
+
+We are early. Today the organization is centered on **mem**; future projects
+will appear here only when they solve a distinct infrastructure problem.
