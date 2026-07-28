@@ -1,0 +1,52 @@
+name: Documentation change
+description: Report missing, incorrect, or unclear documentation
+title: "[Docs] "
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched open and closed issues for duplicate documentation work.
+          required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Documentation location
+      description: Link the affected page, file, heading, help text, or interface.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing, incorrect, outdated, or unclear, and who is affected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed change
+      description: Describe the intended correction or outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List objective checks for the updated documentation.
+      placeholder: |
+        - [ ] Instructions match current behavior
+        - [ ] Links and examples are verified
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link source behavior, specifications, screenshots, or verified examples.

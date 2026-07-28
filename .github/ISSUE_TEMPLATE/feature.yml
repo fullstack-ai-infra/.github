@@ -1,0 +1,79 @@
+name: Feature request
+description: Propose a user-facing capability or meaningful behavior change
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Start with the problem and desired outcome. A preferred implementation is not a substitute for acceptance criteria.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched open and closed issues for related proposals.
+          required: true
+        - label: I checked the repository documentation for existing behavior.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who is blocked, in what context, and why is the current behavior insufficient?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe observable behavior without assuming a particular implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List objective, testable conditions for completion.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] Existing behavior remains compatible where required
+    validations:
+      required: true
+
+  - type: input
+    id: component
+    attributes:
+      label: Affected component
+      description: Name the repository area most closely related to this outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Optional design, interface, user experience, or migration notes.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe existing workarounds and why they are insufficient.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add sanitized examples, measurements, user reports, or source references.
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Compatibility and risk
+      description: Note interface, data, security, privacy, performance, or migration implications.
