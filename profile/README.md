@@ -1,50 +1,43 @@
 # Fullstack AI Infrastructure
 
-Open, self-hostable building blocks for reliable AI agents.
+> Open, self-hostable infrastructure for reliable AI agents.
 
-We build the infrastructure between an AI model and a production system:
-durable context, portable interfaces, and the operational foundations needed
-to keep agents useful over time. Our work prioritizes user-owned data, open
-protocols, and evidence-backed engineering.
+We build the infrastructure between AI models and production systems. Our
+projects prioritize user-owned data, portable interfaces, open protocols,
+operational durability, and claims backed by reproducible evidence.
 
 ## Projects
 
-### [mem](https://github.com/fullstack-ai-infra/mem)
+| Project | Purpose | Maturity | Start here |
+| --- | --- | --- | --- |
+| [**mem**](https://github.com/fullstack-ai-infra/mem) | A portable, self-hosted memory plane for AI agents, with one core across API, MCP, CLI, and UI. | Experimental, active development | [Product spec](https://github.com/fullstack-ai-infra/mem/blob/main/SPEC.md) · [Run locally](https://github.com/fullstack-ai-infra/mem/blob/main/docs/RUN_LOCAL.md) |
+| [**doc**](https://github.com/fullstack-ai-infra/doc) | A portable, self-hosted document plane for people and AI agents, with collaborative editing and version recovery. | Experimental, active development | [Product spec](https://github.com/fullstack-ai-infra/doc/blob/main/SPEC.md) · [Run locally](https://github.com/fullstack-ai-infra/doc/blob/main/docs/RUN_LOCAL.md) |
+| [**digital-employee**](https://github.com/fullstack-ai-infra/digital-employee) | A self-hosted runtime for role-based digital employees built from approved knowledge sources and tools. | Early development | [Repository and current status](https://github.com/fullstack-ai-infra/digital-employee) |
 
-Today, `mem` is an open, self-hosted system for storing user-owned source
-files, searching them with natural language, and recording relationships
-between them.
-
-Our direction is a portable, self-hosted memory plane for AI agents. Structured
-memories, task checkpoints, feedback, archive and restore, export, and
-forgetting are future capabilities under development in
-[mem #11](https://github.com/fullstack-ai-infra/mem/pull/11), which remains in
-review.
-
-[Explore mem](https://github.com/fullstack-ai-infra/mem) ·
-[Read the product spec](https://github.com/fullstack-ai-infra/mem/blob/main/SPEC.md) ·
-[Run it locally](https://github.com/fullstack-ai-infra/mem/blob/main/docs/RUN_LOCAL.md)
+Detailed capabilities, limitations, setup instructions, and roadmaps live in
+each project's repository. The maturity labels above describe the current
+public state; they are not compatibility or production-readiness guarantees.
 
 ## How we work
 
 - Start with a documented problem or outcome.
-- Make changes through issues and pull requests.
+- Make changes through issues and pull requests, with passing checks and
+  independent review.
 - Validate claims with reproducible evidence.
-- Require passing checks and review by someone other than the author.
 - Prefer small, reviewable changes and transparent decisions.
-- Keep shipped capabilities clearly separated from future work.
+- Keep shipped capabilities, experimental work, and future direction clearly
+  separated.
 
 ## Get involved
 
-- Browse the organization's repositories and choose the project closest to
-  your goal.
-- Read the repository's own documentation and contribution guide first.
+- Choose the project closest to your goal and read its status, setup, and
+  contribution documentation.
 - Use the repository's issue templates for bugs, proposals, documentation,
   maintenance, and questions.
 - Report vulnerabilities privately through the affected repository's
   **Security** tab.
 
-Organization-wide defaults are documented in:
+Organization-wide policies:
 
 - [Contributing](https://github.com/fullstack-ai-infra/.github/blob/main/CONTRIBUTING.md)
 - [Governance](https://github.com/fullstack-ai-infra/.github/blob/main/GOVERNANCE.md)
@@ -54,6 +47,3 @@ Organization-wide defaults are documented in:
 
 A repository's local policy supplies project-specific instructions while
 preserving the organization baseline.
-
-We are early. Today the organization is centered on **mem**; future projects
-will appear here only when they solve a distinct infrastructure problem.
