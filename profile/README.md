@@ -1,22 +1,77 @@
 # Fullstack AI Infrastructure
 
-> Open, self-hostable infrastructure for reliable AI agents.
+> Open, self-hostable infrastructure for digital employees that stay portable,
+> inspectable, and under your control.
 
-We build the infrastructure between AI models and production systems. Our
-projects prioritize user-owned data, portable interfaces, open protocols,
-operational durability, and claims backed by reproducible evidence.
+We build the local-first layer between AI models and real work: portable role
+packages, an organization workspace, long-term memory, and collaborative
+documents. Every project favors user-owned data, open interfaces, and claims
+backed by reproducible evidence.
 
-## Projects
+## Start here: [digital&#8209;employee](https://github.com/fullstack-ai-infra/digital-employee)
 
-| Project | Purpose | Maturity | Start here |
-| --- | --- | --- | --- |
-| [**mem**](https://github.com/fullstack-ai-infra/mem) | A portable, self-hosted memory plane for AI agents, with one core across API, MCP, CLI, and UI. | Experimental, active development | [Product spec](https://github.com/fullstack-ai-infra/mem/blob/main/SPEC.md) · [Run locally](https://github.com/fullstack-ai-infra/mem/blob/main/docs/RUN_LOCAL.md) |
-| [**doc**](https://github.com/fullstack-ai-infra/doc) | A portable, self-hosted document plane for people and AI agents, with collaborative editing and version recovery. | Experimental, active development | [Product spec](https://github.com/fullstack-ai-infra/doc/blob/main/SPEC.md) · [Run locally](https://github.com/fullstack-ai-infra/doc/blob/main/docs/RUN_LOCAL.md) |
-| [**digital-employee**](https://github.com/fullstack-ai-infra/digital-employee) | A self-hosted runtime for role-based digital employees built from approved knowledge sources and tools. | Early development | [Repository and current status](https://github.com/fullstack-ai-infra/digital-employee) |
+[![Latest release](https://img.shields.io/github/v/release/fullstack-ai-infra/digital-employee?label=release)](https://github.com/fullstack-ai-infra/digital-employee/releases/latest) [![npm](https://img.shields.io/npm/v/%40fullstack-ai-infra%2Fdigital-employee?label=npm)](https://www.npmjs.com/package/@fullstack-ai-infra/digital-employee) [![CI](https://github.com/fullstack-ai-infra/digital-employee/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/fullstack-ai-infra/digital-employee/actions/workflows/ci.yml)
 
-Detailed capabilities, limitations, setup instructions, and roadmaps live in
-each project's repository. The maturity labels above describe the current
-public state; they are not compatibility or production-readiness guarantees.
+Package a role's instructions, approved knowledge, Schemas, and acceptance
+fixtures as a portable digital employee. Validate it locally without a model
+call, then run one-shot work through a configured, supported Agent Host.
+
+**Try it without credentials:**
+[run an official release-pinned case](https://github.com/fullstack-ai-infra/digital-employee-quickstart#try-a-case-safely).
+
+[Quickstart](https://github.com/fullstack-ai-infra/digital-employee-quickstart) · [Latest release](https://github.com/fullstack-ai-infra/digital-employee/releases/latest) · [CLI and current status](https://github.com/fullstack-ai-infra/digital-employee#run) · [Roadmap](https://github.com/fullstack-ai-infra/digital-employee/blob/main/docs/roadmap.md)
+
+> Digital Employee is under active development. The repositories distinguish
+> public releases from source previews and planned capabilities; a green build
+> or a merged change is not automatically a released feature.
+
+## Explore the product stack
+
+### [digital&#8209;employee&#8209;quickstart](https://github.com/fullstack-ai-infra/digital-employee-quickstart) — official examples
+
+**Release-pinned, credential-free starting point.** Try reusable employee
+packages for team Q&A, onboarding, approval proposals, and product support.
+Each case includes knowledge, Schemas, and offline acceptance fixtures.
+
+[Try a case](https://github.com/fullstack-ai-infra/digital-employee-quickstart#try-a-case-safely) · [Browse examples](https://github.com/fullstack-ai-infra/digital-employee-quickstart#cases)
+
+### [org&#8209;workbench](https://github.com/fullstack-ai-infra/org-workbench) — local organization workspace
+
+**Development preview; no tagged installer release yet.** An Electron desktop
+workspace where the file tree is the org chart, with position-based local
+conversations, auditable organization changes, and local reporting.
+
+[Current status and source setup](https://github.com/fullstack-ai-infra/org-workbench) · [API contract](https://github.com/fullstack-ai-infra/org-workbench/blob/main/docs/api-contract-v0.md)
+
+### [mem](https://github.com/fullstack-ai-infra/mem) — portable memory plane
+
+**Experimental; a public release is available.** Keep files, structured
+memories, task checkpoints, and provenance under your control, with one core
+available through API, MCP, CLI, and UI.
+
+[Quick start](https://github.com/fullstack-ai-infra/mem#快速开始) · [Latest release](https://github.com/fullstack-ai-infra/mem/releases/latest) · [Product direction](https://github.com/fullstack-ai-infra/mem/blob/main/GOAL.md)
+
+### [doc](https://github.com/fullstack-ai-infra/doc) — collaborative document plane
+
+**Experimental source preview; no tagged release yet.** Self-hosted documents
+for people and AI agents, with rich-text editing, real-time collaboration,
+sharing, version recovery, API access, and a CLI.
+
+[Run locally](https://github.com/fullstack-ai-infra/doc/blob/main/docs/RUN_LOCAL.md) · [Capabilities](https://github.com/fullstack-ai-infra/doc/blob/main/docs/CAPABILITIES.md) · [Product direction](https://github.com/fullstack-ai-infra/doc/blob/main/GOAL.md)
+
+These projects can be explored independently. Cross-project integration is
+described as available only when the owning repositories provide release and
+verification evidence.
+
+## For builders
+
+### [design&#8209;system](https://github.com/fullstack-ai-infra/design-system) — shared UI foundation
+
+An experimental set of design tokens, accessible components, and application
+patterns for a consistent Fullstack AI Infrastructure experience. It is
+available for source integration; no stable npm release is promised yet.
+
+[Package guide](https://github.com/fullstack-ai-infra/design-system#develop-and-verify) · [Design decisions](https://github.com/fullstack-ai-infra/design-system/tree/main/docs/adr)
 
 ## How we work
 
@@ -30,8 +85,8 @@ public state; they are not compatibility or production-readiness guarantees.
 
 ## Get involved
 
-- Choose the project closest to your goal and read its status, setup, and
-  contribution documentation.
+- Start with the Digital Employee quickstart, or choose the product plane
+  closest to your goal and read its status and setup documentation.
 - Use the repository's issue templates for bugs, proposals, documentation,
   maintenance, and questions.
 - Report vulnerabilities privately through the affected repository's
