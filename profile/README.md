@@ -1,14 +1,14 @@
-# Fullstack AI Infrastructure
+# ByteFolk
 
-> Open, self-hostable infrastructure for digital employees that stay portable,
-> inspectable, and under your control.
+> Your team. Your data. Your infrastructure.
 
-We build the local-first layer between AI models and real work: portable role
-packages, an organization workspace, long-term memory, and collaborative
-documents. Every project favors user-owned data, open interfaces, and claims
-backed by reproducible evidence.
+ByteFolk builds open, self-hostable infrastructure for digital teams. We make
+the local-first layer between AI models and real work: portable role packages,
+an organization workspace, long-term memory, and collaborative documents.
+Every project favors user-owned data, open interfaces, and claims backed by
+reproducible evidence.
 
-## Start here: [digital&#8209;employee](https://github.com/fullstack-ai-infra/digital-employee)
+## Start here: [Digital&nbsp;Employee](https://github.com/fullstack-ai-infra/digital-employee)
 
 [![Latest release](https://img.shields.io/github/v/release/fullstack-ai-infra/digital-employee?label=release)](https://github.com/fullstack-ai-infra/digital-employee/releases/latest) [![npm](https://img.shields.io/npm/v/%40fullstack-ai-infra%2Fdigital-employee?label=npm)](https://www.npmjs.com/package/@fullstack-ai-infra/digital-employee) [![CI](https://github.com/fullstack-ai-infra/digital-employee/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/fullstack-ai-infra/digital-employee/actions/workflows/ci.yml)
 
@@ -27,7 +27,7 @@ call, then run one-shot work through a configured, supported Agent Host.
 
 ## Explore the product stack
 
-### [digital&#8209;employee&#8209;quickstart](https://github.com/fullstack-ai-infra/digital-employee-quickstart) — official examples
+### [Digital&nbsp;Employee&nbsp;Quickstart](https://github.com/fullstack-ai-infra/digital-employee-quickstart) — official examples
 
 **Release-pinned, credential-free starting point.** Try reusable employee
 packages for team Q&A, onboarding, approval proposals, and product support.
@@ -35,7 +35,7 @@ Each case includes knowledge, Schemas, and offline acceptance fixtures.
 
 [Try a case](https://github.com/fullstack-ai-infra/digital-employee-quickstart#try-a-case-safely) · [Browse examples](https://github.com/fullstack-ai-infra/digital-employee-quickstart#cases)
 
-### [org&#8209;workbench](https://github.com/fullstack-ai-infra/org-workbench) — local organization workspace
+### [Org&nbsp;Workbench](https://github.com/fullstack-ai-infra/org-workbench) — local organization workspace
 
 **Development preview; no tagged installer release yet.** An Electron desktop
 workspace where the file tree is the org chart, with position-based local
@@ -43,7 +43,7 @@ conversations, auditable organization changes, and local reporting.
 
 [Current status and source setup](https://github.com/fullstack-ai-infra/org-workbench) · [API contract](https://github.com/fullstack-ai-infra/org-workbench/blob/main/docs/api-contract-v0.md)
 
-### [mem](https://github.com/fullstack-ai-infra/mem) — portable memory plane
+### [Memory](https://github.com/fullstack-ai-infra/mem) — portable memory plane
 
 **Experimental; a public release is available.** Keep files, structured
 memories, task checkpoints, and provenance under your control, with one core
@@ -51,7 +51,7 @@ available through API, MCP, CLI, and UI.
 
 [Quick start](https://github.com/fullstack-ai-infra/mem#快速开始) · [Latest release](https://github.com/fullstack-ai-infra/mem/releases/latest) · [Product direction](https://github.com/fullstack-ai-infra/mem/blob/main/GOAL.md)
 
-### [doc](https://github.com/fullstack-ai-infra/doc) — collaborative document plane
+### [Docs](https://github.com/fullstack-ai-infra/doc) — collaborative document plane
 
 **Experimental source preview; no tagged release yet.** Self-hosted documents
 for people and AI agents, with rich-text editing, real-time collaboration,
@@ -65,11 +65,11 @@ verification evidence.
 
 ## For builders
 
-### [design&#8209;system](https://github.com/fullstack-ai-infra/design-system) — shared UI foundation
+### [Design&nbsp;System](https://github.com/fullstack-ai-infra/design-system) — shared UI foundation
 
 An experimental set of design tokens, accessible components, and application
-patterns for a consistent Fullstack AI Infrastructure experience. It is
-available for source integration; no stable npm release is promised yet.
+patterns for a consistent ByteFolk experience. It is available for source
+integration; no stable npm release is promised yet.
 
 [Package guide](https://github.com/fullstack-ai-infra/design-system#develop-and-verify) · [Design decisions](https://github.com/fullstack-ai-infra/design-system/tree/main/docs/adr)
 
