@@ -25,7 +25,11 @@ corresponding control is enforced.
   descriptions are written in English. Explicit translations are permitted
   when they are clearly identified (for example, `README.zh-CN.md`), link back
   to the English canonical document, and are kept semantically synchronized.
-  Conversation outside the repository may use any language.
+  A clearly locale-marked document that already had no English source when a
+  repository adopted this baseline may remain as a frozen, non-canonical
+  historical record; any substantive update first establishes and links an
+  English canonical source. Conversation outside the repository may use any
+  language.
 - **No automated co-authors.** Commits must not carry `Co-Authored-By`
   trailers or author entries for AI agents, models, or automation tools, and
   such tools must not be credited as authors anywhere in Git metadata.
