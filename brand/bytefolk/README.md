@@ -1,7 +1,7 @@
 # ByteFolk brand mark
 
 The ByteFolk organization mark is the minimal one-color **horned B** approved in
-[issue #18](https://github.com/fullstack-ai-infra/.github/issues/18). It combines a capital `B`,
+[issue #18](https://github.com/bytefolk/.github/issues/18). It combines a capital `B`,
 two modular horns, and an extended lower bowl that hints at the digital-employee mascot without
 turning the logo into an illustration.
 
