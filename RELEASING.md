@@ -1,6 +1,6 @@
 # Release Process
 
-This document defines the release baseline for `fullstack-ai-infra`
+This document defines the release baseline for `bytefolk`
 repositories. A repository may add stricter automation, but it may not skip an
 applicable gate. Each repository declares which distribution channels it
 supports; npm, GitHub Release, and GHCR are checked explicitly, but a repository

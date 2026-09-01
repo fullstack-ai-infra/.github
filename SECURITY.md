@@ -22,7 +22,7 @@ repository rather than a general organization inbox. To report privately:
 If the repository does not show **Report a vulnerability**, first follow any
 repository-local security policy. If it inherits this policy and has no private
 form, use the organization's
-[confidential fallback inbox](https://github.com/fullstack-ai-infra/.github/security/advisories/new)
+[confidential fallback inbox](https://github.com/bytefolk/.github/security/advisories/new)
 and name every affected repository in the report. Do not include vulnerability
 details in a public request.
 
