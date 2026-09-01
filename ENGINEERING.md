@@ -1,7 +1,7 @@
 # Engineering Standards
 
 This document is the operational layer of the organization baseline. It
-defines the practices `fullstack-ai-infra` repositories adopt: language and
+defines the practices `bytefolk` repositories adopt: language and
 attribution policy, branch and commit rules, mandatory testing, issue
 governance, pull request gates, and code review rules.
 
