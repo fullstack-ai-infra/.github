@@ -22,10 +22,13 @@ organization avatars, favicons, repository ownership marks, or compact product n
 - Primary ink: `#141414`.
 - Reversed ink: `#FFFFFF`.
 - Keep clear space of at least one horn-stem width around the symbol.
+- Keep every visible avatar pixel (any grayscale value below 250) inside the 496 px-radius circle
+  centered at `(511.5, 511.5)` on the 1024 px canvas. This leaves 16 px inside GitHub's 512 px
+  circular crop.
 - Use the standalone symbol at 16 px or larger.
 - Use the horizontal lockup at 120 px wide or larger.
 - Upload `avatar-1024.png` without recropping or recoloring it. The image already includes padding
-  for GitHub's circular presentation.
+  and a validated circular safe area for GitHub's presentation.
 - On dark surfaces, use `symbol-reversed.svg`; do not place the primary black mark directly on a
   dark background.
 

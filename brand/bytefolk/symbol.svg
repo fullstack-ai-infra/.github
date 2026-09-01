@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk symbol">
   <title>ByteFolk symbol</title>
   <desc>A minimal one-color capital B with two modular horns and an extended lower bowl.</desc>
-  <g id="bytefolk-symbol" fill="#141414">
+  <g id="bytefolk-symbol" fill="#141414" transform="translate(8 8) scale(.9)">
     <path d="M20 45V21h14v12h24v14H22a2 2 0 0 1-2-2Z"/>
     <path d="M100 33h26V21h14v24a2 2 0 0 1-2 2h-38Z"/>
     <rect x="31" y="55" width="20" height="84" rx="6"/>

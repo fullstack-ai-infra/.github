@@ -8,8 +8,12 @@ ROOT = Pathname.new(File.expand_path("..", __dir__)).freeze
 ASSET_DIR = ROOT.join("brand", "bytefolk").freeze
 SVG_NAMES = %w[symbol.svg symbol-reversed.svg lockup.svg].freeze
 PROHIBITED_ELEMENTS = %w[filter foreignObject image linearGradient radialGradient script].freeze
+CIRCULAR_SAFETY_MARGIN = 16.0
+INK_THRESHOLD = 250
 
 errors = []
+circular_metrics = nil
+geometry_signatures = {}
 
 SVG_NAMES.each do |name|
   path = ASSET_DIR.join(name)
@@ -46,6 +50,21 @@ SVG_NAMES.each do |name|
       end
     end
   end
+
+  symbol_group = REXML::XPath.first(document, "//*[starts-with(@id, 'bytefolk-symbol')]")
+  if symbol_group
+    child_geometry = symbol_group.elements.map do |element|
+      attributes = element.attributes.map { |key, value| [key, value] }.sort
+      [element.name, attributes]
+    end
+    geometry_signatures[name] = [symbol_group.attributes["transform"].to_s, child_geometry]
+  else
+    errors << "#{path.relative_path_from(ROOT)}: ByteFolk symbol group is missing"
+  end
+end
+
+if geometry_signatures.length == SVG_NAMES.length && geometry_signatures.values.uniq.length != 1
+  errors << "ByteFolk primary, reversed, and lockup symbol geometry must remain identical"
 end
 
 png_path = ASSET_DIR.join("avatar-1024.png")
@@ -94,6 +113,11 @@ else
           min_y = height
           max_x = -1
           max_y = -1
+          center_x = (width - 1) / 2.0
+          center_y = (height - 1) / 2.0
+          safe_radius = ([width, height].min / 2.0) - CIRCULAR_SAFETY_MARGIN
+          max_ink_radius = 0.0
+          outside_circle_ink = 0
 
           height.times do |y|
             filter = raw.getbyte(cursor)
@@ -127,12 +151,15 @@ else
                 errors << "#{png_path.relative_path_from(ROOT)}: avatar must remain grayscale"
                 break
               end
-              next if red >= 250
+              next if red >= INK_THRESHOLD
 
               min_x = [min_x, x].min
               min_y = [min_y, y].min
               max_x = [max_x, x].max
               max_y = [max_y, y].max
+              ink_radius = Math.hypot(x - center_x, y - center_y)
+              max_ink_radius = [max_ink_radius, ink_radius].max
+              outside_circle_ink += 1 if ink_radius > safe_radius
             end
             pixels.concat(row)
             prior = row
@@ -142,7 +169,26 @@ else
           errors << "#{png_path.relative_path_from(ROOT)}: primary ink is not #141414" unless darkest == 20
           margins = [min_x, min_y, width - 1 - max_x, height - 1 - max_y]
           if max_x.negative? || margins.any? { |margin| margin < 100 }
-            errors << "#{png_path.relative_path_from(ROOT)}: insufficient circular-crop padding #{margins.inspect}"
+            errors << "#{png_path.relative_path_from(ROOT)}: insufficient rectangular padding #{margins.inspect}"
+          end
+          if outside_circle_ink.positive?
+            errors << format(
+              "%s: %d ink pixels outside centered circular safe area (center=%.1f,%.1f radius=%.1fpx; max=%.1fpx)",
+              png_path.relative_path_from(ROOT),
+              outside_circle_ink,
+              center_x,
+              center_y,
+              safe_radius,
+              max_ink_radius
+            )
+          else
+            circular_metrics = format(
+              "outside-circle ink=0; center=(%.1f,%.1f); safe radius=%.1fpx; max ink radius=%.1fpx",
+              center_x,
+              center_y,
+              safe_radius,
+              max_ink_radius
+            )
           end
         end
       end
@@ -152,6 +198,7 @@ end
 
 if errors.empty?
   puts "Validated #{SVG_NAMES.length} ByteFolk SVGs and one opaque 1024x1024 RGB avatar."
+  puts "Circular crop: #{circular_metrics}."
 else
   warn errors.join("\n")
   exit 1

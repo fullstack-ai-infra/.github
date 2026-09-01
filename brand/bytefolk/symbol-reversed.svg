@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk reversed symbol">
   <title>ByteFolk reversed symbol</title>
   <desc>A white version of the minimal ByteFolk symbol for dark backgrounds.</desc>
-  <g id="bytefolk-symbol-reversed" fill="#ffffff">
+  <g id="bytefolk-symbol-reversed" fill="#ffffff" transform="translate(8 8) scale(.9)">
     <path d="M20 45V21h14v12h24v14H22a2 2 0 0 1-2-2Z"/>
     <path d="M100 33h26V21h14v24a2 2 0 0 1-2 2h-38Z"/>
     <rect x="31" y="55" width="20" height="84" rx="6"/>
