@@ -30,6 +30,9 @@ jobs:
       - name: Validate issue forms and Markdown links
         run: ruby scripts/validate-governance.rb
 
+      - name: Validate ByteFolk brand assets
+        run: ruby scripts/validate-brand-assets.rb
+
       - name: Check whitespace
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}

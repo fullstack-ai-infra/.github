@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk reversed symbol">
+  <title>ByteFolk reversed symbol</title>
+  <desc>A white version of the minimal ByteFolk symbol for dark backgrounds.</desc>
+  <g id="bytefolk-symbol-reversed" fill="#ffffff">
+    <path d="M20 45V21h14v12h24v14H22a2 2 0 0 1-2-2Z"/>
+    <path d="M100 33h26V21h14v24a2 2 0 0 1-2 2h-38Z"/>
+    <rect x="31" y="55" width="20" height="84" rx="6"/>
+    <path d="M58 55h31c25 0 40 12 40 30 0 10-5 18-15 23 14 4 22 12 22 23 0 5-5 8-15 8H58v-17h48c8 0 12-4 12-10s-4-10-12-10H58V86h29c14 0 21-4 21-9s-7-7-21-7H58Z"/>
+  </g>
+</svg>
