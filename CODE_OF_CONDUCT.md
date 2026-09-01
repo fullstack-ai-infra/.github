@@ -38,7 +38,7 @@ where someone is representing an organization project.
 ## Reporting and enforcement
 
 Report conduct concerns through the organization's
-[confidential reporting inbox](https://github.com/fullstack-ai-infra/.github/security/advisories/new)
+[confidential reporting inbox](https://github.com/bytefolk/.github/security/advisories/new)
 and begin the title with `CONDUCT:`. This repository's private reporting
 feature is intentionally enabled as the organization fallback; a report does
 not need to describe a software vulnerability.

@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for contributing to a fullstack-ai-infra project.
+Thank you for contributing to a ByteFolk project.
 
 This file is the organization-wide baseline for repositories that do not
 provide their own contribution guide. Repository-local instructions are

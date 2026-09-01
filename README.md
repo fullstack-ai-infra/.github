@@ -1,8 +1,8 @@
 # ByteFolk organization defaults
 
 This repository contains ByteFolk's public organization profile and the
-community health defaults inherited by repositories under the current
-`fullstack-ai-infra` GitHub handle that do not define their own local versions.
+community health defaults inherited by repositories under the `bytefolk`
+GitHub handle that do not define their own local versions.
 
 - [`profile/README.md`](profile/README.md) renders on the organization page.
 - [`GOVERNANCE.md`](GOVERNANCE.md) defines roles, decisions, access, and the

@@ -1,7 +1,7 @@
 # Governance
 
-This document defines the organization-wide governance baseline for
-fullstack-ai-infra projects. It explains which defaults are inherited from this
+This document defines the organization-wide governance baseline for ByteFolk
+projects. It explains which defaults are inherited from this
 repository and which decisions belong to each project.
 
 ## Principles
