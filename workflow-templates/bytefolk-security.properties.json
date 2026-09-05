@@ -1,0 +1,10 @@
+{
+  "name": "ByteFolk Security Baseline",
+  "description": "Pinned CodeQL and dependency-review checks for ByteFolk repositories",
+  "iconName": "shield",
+  "categories": [
+    "Code scanning",
+    "Dependency management",
+    "Security"
+  ]
+}
