@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk monochrome symbol">
+  <title>ByteFolk Symbol — Monochrome</title>
+  <desc>A single-ink version of the modular hybrid B symbol for print and restricted-color use.</desc>
+  <g id="bytefolk-symbol-monochrome" fill="#141414">
+    <rect x="16" y="16" width="128" height="128" rx="26"/>
+    <path d="M28 49V27h14v10h22v14H30a2 2 0 0 1-2-2Zm67-12h23V27h14v22a2 2 0 0 1-2 2H95Z"/>
+  </g>
+  <g fill="#ffffff">
+    <rect x="48" y="55" width="16" height="72" rx="5"/>
+    <path d="M68 55h28c19 0 31 9 31 23 0 8-4 14-12 18 12 3 19 10 19 20 0 8-5 11-15 11H68v-16h43c5 0 8-3 8-7s-3-7-8-7H68V83h24c8 0 12-3 12-7s-4-7-12-7H68Z"/>
+    <rect x="78" y="101" width="46" height="18" rx="7"/>
+  </g>
+  <rect x="76" y="62" width="14" height="14" rx="4" fill="#141414"/>
+  <rect x="103" y="107" width="6" height="7" rx="3" fill="#141414"/>
+  <rect x="115" y="107" width="6" height="7" rx="3" fill="#141414"/>
+</svg>

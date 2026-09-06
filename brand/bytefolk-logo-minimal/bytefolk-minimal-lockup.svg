@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="ByteFolk minimal horizontal logo">
+  <title>ByteFolk Minimal Horizontal Logo</title>
+  <desc>The minimal contained ByteFolk symbol paired with the ByteFolk wordmark.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; }
+    .wordmark { fill: var(--ink); font-family: Inter, "Segoe UI", Arial, sans-serif; font-size: 66px; font-weight: 760; letter-spacing: -3px; }
+  </style>
+  <g transform="translate(8 8) scale(.9)">
+    <rect x="16" y="16" width="128" height="128" rx="26" fill="var(--ink)"/>
+    <g fill="var(--blue)">
+      <path d="M28 51V29h13v10h22v14H30a2 2 0 0 1-2-2Z"/>
+      <path d="M96 39h23V29h13v22a2 2 0 0 1-2 2H96Z"/>
+      <rect x="39" y="59" width="17" height="70" rx="5"/>
+      <path d="M62 59h25c23 0 36 10 36 25 0 9-5 16-14 20 13 4 20 11 20 20 0 3-4 5-12 5H62v-15h41c7 0 11-3 11-8s-4-8-11-8H62V84h23c12 0 18-3 18-7s-6-6-18-6H62Z"/>
+    </g>
+    <rect x="72" y="66" width="13" height="13" rx="4" fill="var(--purple)"/>
+  </g>
+  <text class="wordmark" x="176" y="103">ByteFolk</text>
+</svg>

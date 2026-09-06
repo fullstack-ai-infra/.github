@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk profile head mark">
+  <title>ByteFolk Head A — Profile</title>
+  <desc>A six-part modular side profile combining cow horns, a horse muzzle, and a human-like digital eye.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; --paper: #ffffff; }
+  </style>
+  <g id="bytefolk-head-profile">
+    <!-- Two open connector horns imply both cattle and composability. -->
+    <path fill="var(--blue)" d="M31 44V20h14v12h18v14H33a2 2 0 0 1-2-2Zm62-12h18V20h14v24a2 2 0 0 1-2 2H93Z"/>
+    <!-- One stepped module is both horse mane and the B spine. -->
+    <path fill="var(--purple)" d="M22 50h25v18H16V56a6 6 0 0 1 6-6Zm-6 24h31v18H16Zm0 24h31v18H22a6 6 0 0 1-6-6Z"/>
+    <!-- The main head is one solid, logo-grade block. -->
+    <path fill="var(--ink)" d="M47 40h50l18 18v12h15a14 14 0 0 1 14 14v20a14 14 0 0 1-14 14H96l-14 14H59a12 12 0 0 1-12-12V40Z"/>
+    <!-- Human attention becomes one square digital eye. -->
+    <rect x="61" y="55" width="20" height="20" rx="5" fill="var(--blue)"/>
+    <rect x="68" y="62" width="6" height="6" rx="2" fill="var(--paper)"/>
+    <!-- The projecting white block is the horse muzzle and lower B bowl. -->
+    <rect x="94" y="80" width="50" height="32" rx="10" fill="var(--paper)"/>
+    <rect x="108" y="91" width="7" height="9" rx="3" fill="var(--ink)"/>
+    <rect x="127" y="91" width="7" height="9" rx="3" fill="var(--ink)"/>
+    <!-- A final connector suggests the human/digital-employee body without drawing it. -->
+    <rect x="58" y="118" width="30" height="18" rx="5" fill="var(--blue)"/>
+  </g>
+</svg>

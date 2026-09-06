@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk frontal head mark">
+  <title>ByteFolk Head B — Front</title>
+  <desc>A symmetric modular face with cow horns, a central horse mane and muzzle, and a calm human gaze.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; --paper: #ffffff; }
+  </style>
+  <g id="bytefolk-head-front">
+    <!-- Horn brackets lock into the head like open-source modules. -->
+    <path fill="var(--blue)" d="M18 50V22h14v14h20v14H18Zm90-14h20V22h14v28h-34Z"/>
+    <!-- One purple vertical piece is mane, AI core, and human center line. -->
+    <path fill="var(--purple)" d="M70 22h20v30H70Z"/>
+    <!-- A single compact silhouette keeps the mark readable at 16px. -->
+    <path fill="var(--ink)" d="M34 42h92v67a24 24 0 0 1-24 24H58a24 24 0 0 1-24-24V42Z"/>
+    <!-- Square eyes feel attentive rather than animal-cute. -->
+    <rect x="49" y="62" width="18" height="18" rx="5" fill="var(--blue)"/>
+    <rect x="93" y="62" width="18" height="18" rx="5" fill="var(--blue)"/>
+    <rect x="55" y="68" width="6" height="6" rx="2" fill="var(--paper)"/>
+    <rect x="99" y="68" width="6" height="6" rx="2" fill="var(--paper)"/>
+    <!-- Wide projecting muzzle carries the horse/cattle ambiguity. -->
+    <rect x="48" y="86" width="64" height="36" rx="12" fill="var(--paper)"/>
+    <rect x="62" y="99" width="8" height="10" rx="4" fill="var(--ink)"/>
+    <rect x="90" y="99" width="8" height="10" rx="4" fill="var(--ink)"/>
+  </g>
+</svg>

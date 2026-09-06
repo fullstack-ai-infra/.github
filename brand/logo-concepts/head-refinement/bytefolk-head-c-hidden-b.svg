@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk hidden B head mark">
+  <title>ByteFolk Head C — Hidden B</title>
+  <desc>A compact app-icon mark where a modular B also reads as a horned hybrid animal and human face.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; --paper: #ffffff; }
+  </style>
+  <g id="bytefolk-hidden-b">
+    <rect x="16" y="16" width="128" height="128" rx="26" fill="var(--ink)"/>
+    <!-- Horns make the top edge unmistakably character-led. -->
+    <path fill="var(--blue)" d="M31 51V29h14v10h22v14H33a2 2 0 0 1-2-2Zm62-12h22V29h14v22a2 2 0 0 1-2 2H93Z"/>
+    <!-- White spine plus blue bowls form the B. -->
+    <rect x="38" y="57" width="18" height="70" rx="5" fill="var(--paper)"/>
+    <path fill="var(--blue)" d="M61 57h30c18 0 29 8 29 21 0 8-4 14-12 18 9 3 14 9 14 17 0 9-8 14-23 14H61v-16h32c7 0 11-3 11-8s-4-8-11-8H61V81h28c7 0 10-2 10-6s-3-6-10-6H61Z"/>
+    <!-- One purple eye is the AI module; the white cut is the horse muzzle. -->
+    <rect x="69" y="65" width="13" height="13" rx="4" fill="var(--purple)"/>
+    <rect x="69" y="102" width="18" height="13" rx="4" fill="var(--paper)"/>
+    <rect x="91" y="105" width="7" height="8" rx="3" fill="var(--ink)"/>
+  </g>
+</svg>

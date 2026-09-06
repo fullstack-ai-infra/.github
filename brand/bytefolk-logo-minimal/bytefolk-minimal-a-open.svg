@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk minimal open symbol">
+  <title>ByteFolk Minimal Symbol A — Open</title>
+  <desc>A four-shape symbol combining a modular B, two cow horns, a long horse-like lower bowl, and one AI eye.</desc>
+  <style>:root { --blue: #1677ff; --purple: #722ed1; }</style>
+  <g id="bytefolk-minimal-open" fill="var(--blue)">
+    <!-- Two horns are also open connector brackets. -->
+    <path d="M20 45V21h14v12h24v14H22a2 2 0 0 1-2-2Z"/>
+    <path d="M100 33h26V21h14v24a2 2 0 0 1-2 2h-38Z"/>
+    <!-- A plain vertical module anchors the B. -->
+    <rect x="31" y="55" width="20" height="84" rx="6"/>
+    <!-- Both B bowls are one continuous animal-head module; the lower bowl projects like a muzzle. -->
+    <path d="M58 55h31c25 0 40 12 40 30 0 10-5 18-15 23 14 4 22 12 22 23 0 5-5 8-15 8H58v-17h48c8 0 12-4 12-10s-4-10-12-10H58V86h29c14 0 21-4 21-9s-7-7-21-7H58Z"/>
+  </g>
+  <!-- One square is enough to make the mark feel attentive and AI-native. -->
+  <rect x="70" y="63" width="15" height="15" rx="4" fill="var(--purple)"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="ByteFolk symbol">
+  <title>ByteFolk Symbol — Modular Hybrid B</title>
+  <desc>A modular B that also forms a side-profile digital coworker with cow horns, horse muzzle, mane, and human attention.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; --paper: #ffffff; }
+  </style>
+  <g id="bytefolk-symbol">
+    <rect x="16" y="16" width="128" height="128" rx="26" fill="var(--ink)"/>
+    <!-- Cow horns double as open connector brackets. -->
+    <path fill="var(--blue)" d="M28 49V27h14v10h22v14H30a2 2 0 0 1-2-2Zm67-12h23V27h14v22a2 2 0 0 1-2 2H95Z"/>
+    <!-- Three tiles form a horse mane and the community's modular rhythm. -->
+    <path fill="var(--purple)" d="M28 57h18v16H28Zm0 21h18v16H28Zm0 21h18v16H28Z"/>
+    <!-- The white spine and blue head form a hidden capital B. -->
+    <rect x="48" y="55" width="16" height="72" rx="5" fill="var(--paper)"/>
+    <path fill="var(--blue)" d="M68 55h28c19 0 31 9 31 23 0 8-4 14-12 18 12 3 19 10 19 20 0 8-5 11-15 11H68v-16h43c5 0 8-3 8-7s-3-7-8-7H68V83h24c8 0 12-3 12-7s-4-7-12-7H68Z"/>
+    <!-- One purple module is an intelligent human-like eye. -->
+    <rect x="76" y="62" width="14" height="14" rx="4" fill="var(--purple)"/>
+    <rect x="81" y="67" width="4" height="4" rx="1" fill="var(--paper)"/>
+    <!-- The lower B counter becomes a projecting horse/cattle muzzle. -->
+    <rect x="78" y="101" width="46" height="18" rx="7" fill="var(--paper)"/>
+    <rect x="103" y="107" width="6" height="7" rx="3" fill="var(--ink)"/>
+    <rect x="115" y="107" width="6" height="7" rx="3" fill="var(--ink)"/>
+  </g>
+</svg>

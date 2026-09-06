@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ByteFolk minimal logo refinement</title>
+    <style>
+      :root { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #141414; background: #f5f5f5; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 48px; }
+      main { max-width: 1080px; margin: 0 auto; }
+      h1 { margin: 0 0 8px; font-size: 30px; }
+      .intro { margin: 0 0 32px; color: rgba(0, 0, 0, .65); }
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .card, .lockup { border: 1px solid #d9d9d9; border-radius: 8px; background: #fff; }
+      .mark { display: grid; place-items: center; min-height: 300px; padding: 48px; }
+      .mark img { width: 190px; height: 190px; }
+      .meta { padding: 18px 20px; border-top: 1px solid #d9d9d9; }
+      .meta strong, .meta span { display: block; }
+      .meta span { margin-top: 5px; color: rgba(0, 0, 0, .65); font-size: 14px; line-height: 1.5; }
+      .lockup { display: grid; place-items: center; min-height: 260px; margin-top: 20px; padding: 48px; }
+      .lockup img { width: min(100%, 760px); }
+      .avatar-row { display: flex; align-items: end; gap: 24px; margin-top: 20px; padding: 26px; border: 1px solid #424242; border-radius: 8px; background: #141414; }
+      .avatar { overflow: hidden; border-radius: 50%; }
+      .avatar img { display: block; width: 100%; height: 100%; }
+      .avatar:nth-child(1) { width: 96px; height: 96px; }
+      .avatar:nth-child(2) { width: 48px; height: 48px; }
+      .avatar:nth-child(3) { width: 24px; height: 24px; }
+      @media (max-width: 760px) { body { padding: 24px; } .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>ByteFolk · minimal refinement</h1>
+      <p class="intro">Horn + B + one AI eye. Everything else belongs to the mascot.</p>
+      <section class="grid" aria-label="Minimal symbol options">
+        <article class="card"><div class="mark"><img src="bytefolk-minimal-a-open.svg" alt="Open symbol" /></div><div class="meta"><strong>A · Open</strong><span>No container; the most brand-like and flexible.</span></div></article>
+        <article class="card"><div class="mark"><img src="bytefolk-minimal-b-contained.svg" alt="Contained symbol" /></div><div class="meta"><strong>B · Contained</strong><span>Best for GitHub avatar and product navigation.</span></div></article>
+        <article class="card"><div class="mark"><img src="bytefolk-minimal-c-one-color.svg" alt="One-color symbol" /></div><div class="meta"><strong>C · One color</strong><span>The structural test: no mascot details, no accent dependency.</span></div></article>
+      </section>
+      <section class="lockup" aria-label="Minimal horizontal logo"><img src="bytefolk-minimal-lockup.svg" alt="ByteFolk minimal logo" /></section>
+      <section class="avatar-row" aria-label="Avatar scale preview"><div class="avatar"><img src="bytefolk-minimal-b-contained.svg" alt="96 pixel avatar" /></div><div class="avatar"><img src="bytefolk-minimal-b-contained.svg" alt="48 pixel avatar" /></div><div class="avatar"><img src="bytefolk-minimal-b-contained.svg" alt="24 pixel avatar" /></div></section>
+    </main>
+  </body>
+</html>

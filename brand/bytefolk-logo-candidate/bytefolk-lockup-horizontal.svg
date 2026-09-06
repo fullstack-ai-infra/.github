@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" role="img" aria-label="ByteFolk logo">
+  <title>ByteFolk Primary Horizontal Logo</title>
+  <desc>The ByteFolk modular hybrid B symbol paired with the ByteFolk wordmark.</desc>
+  <style>
+    :root { --blue: #1677ff; --purple: #722ed1; --ink: #141414; --paper: #ffffff; }
+    .wordmark {
+      fill: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-size: 66px;
+      font-weight: 760;
+      letter-spacing: -3px;
+    }
+  </style>
+  <g id="bytefolk-symbol" transform="translate(8 8) scale(.9)">
+    <rect x="16" y="16" width="128" height="128" rx="26" fill="var(--ink)"/>
+    <path fill="var(--blue)" d="M28 49V27h14v10h22v14H30a2 2 0 0 1-2-2Zm67-12h23V27h14v22a2 2 0 0 1-2 2H95Z"/>
+    <path fill="var(--purple)" d="M28 57h18v16H28Zm0 21h18v16H28Zm0 21h18v16H28Z"/>
+    <rect x="48" y="55" width="16" height="72" rx="5" fill="var(--paper)"/>
+    <path fill="var(--blue)" d="M68 55h28c19 0 31 9 31 23 0 8-4 14-12 18 12 3 19 10 19 20 0 8-5 11-15 11H68v-16h43c5 0 8-3 8-7s-3-7-8-7H68V83h24c8 0 12-3 12-7s-4-7-12-7H68Z"/>
+    <rect x="76" y="62" width="14" height="14" rx="4" fill="var(--purple)"/>
+    <rect x="81" y="67" width="4" height="4" rx="1" fill="var(--paper)"/>
+    <rect x="78" y="101" width="46" height="18" rx="7" fill="var(--paper)"/>
+    <rect x="103" y="107" width="6" height="7" rx="3" fill="var(--ink)"/>
+    <rect x="115" y="107" width="6" height="7" rx="3" fill="var(--ink)"/>
+  </g>
+  <text class="wordmark" x="176" y="103">ByteFolk</text>
+</svg>
