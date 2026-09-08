@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytefolk/.github/main/brand/bytefolk/symbol-reversed.svg">
-    <img src="https://raw.githubusercontent.com/bytefolk/.github/main/brand/bytefolk/symbol.svg" alt="ByteFolk symbol" width="72" height="72">
-  </picture>
+  <img src="https://avatars.githubusercontent.com/u/309981672?v=4" alt="ByteFolk organization avatar" width="72" height="72">
 </p>
 
 <h1 align="center">ByteFolk</h1>
