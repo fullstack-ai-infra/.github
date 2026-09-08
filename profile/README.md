@@ -1,104 +1,97 @@
-# ByteFolk
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bytefolk/.github/main/brand/bytefolk/symbol-reversed.svg">
+    <img src="https://raw.githubusercontent.com/bytefolk/.github/main/brand/bytefolk/symbol.svg" alt="ByteFolk symbol" width="72" height="72">
+  </picture>
+</p>
 
-> Your team. Your data. Your infrastructure.
+<h1 align="center">ByteFolk</h1>
 
-ByteFolk builds open, self-hostable infrastructure for digital teams. We make
-the local-first layer between AI models and real work: portable role packages,
-an organization workspace, long-term memory, and collaborative documents.
-Every project favors user-owned data, open interfaces, and claims backed by
-reproducible evidence.
+<p align="center">
+  <strong>Your team. Your data. Your infrastructure.</strong><br>
+  Open-source, self-hostable tools for people and AI agents to work together.
+</p>
 
-## Start here: [Digital&nbsp;Employee](https://github.com/bytefolk/digital-employee)
+<p align="center">
+  <a href="https://github.com/bytefolk/roleweave/releases/latest">Download RoleWeave</a> ·
+  <a href="https://github.com/bytefolk/digital-employee-quickstart#try-a-case-safely">Try the CLI</a> ·
+  <a href="https://github.com/bytefolk/.github/blob/main/profile/README.zh-CN.md">简体中文</a>
+</p>
 
-[![Latest release](https://img.shields.io/github/v/release/bytefolk/digital-employee?label=release)](https://github.com/bytefolk/digital-employee/releases/latest) [![npm](https://img.shields.io/npm/v/%40fullstack-ai-infra%2Fdigital-employee?label=npm)](https://www.npmjs.com/package/@fullstack-ai-infra/digital-employee) [![CI](https://github.com/bytefolk/digital-employee/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bytefolk/digital-employee/actions/workflows/ci.yml)
+ByteFolk helps you organize AI employees, keep useful knowledge, and collaborate
+on documents. Start with a desktop app or a portable CLI package, then add the
+services your team needs.
 
-Package a role's instructions, approved knowledge, Schemas, and acceptance
-fixtures as a portable digital employee. Validate it locally without a model
-call, then run one-shot work through a configured, supported Agent Host.
+## Start with your workflow
 
-**Try it without credentials:**
-[run an official release-pinned case](https://github.com/bytefolk/digital-employee-quickstart#try-a-case-safely).
+### Use a desktop workspace → [RoleWeave](https://github.com/bytefolk/roleweave)
 
-[Quickstart](https://github.com/bytefolk/digital-employee-quickstart) · [Latest release](https://github.com/bytefolk/digital-employee/releases/latest) · [CLI and current status](https://github.com/bytefolk/digital-employee#run) · [Roadmap](https://github.com/bytefolk/digital-employee/blob/main/docs/roadmap.md)
+Create a project, organize digital employees, and work with them through
+role-based conversations. Keep the organization, documents, and task history
+in one local workspace.
 
-> Digital Employee is under active development. The repositories distinguish
-> public releases from source previews and planned capabilities; a green build
-> or a merged change is not automatically a released feature.
+**Desktop preview available.** [macOS Apple Silicon](https://github.com/bytefolk/roleweave/releases/download/v0.1.1/roleweave-0.1.1-arm64.dmg) · [Windows x64](https://github.com/bytefolk/roleweave/releases/download/v0.1.1/roleweave-0.1.1-x64.exe) · [Release notes](https://github.com/bytefolk/roleweave/releases/tag/v0.1.1)
 
-## Explore the product stack
+> The current v0.1.1 installers are for macOS Apple Silicon and Windows x64.
+> They are not Apple Developer ID-signed/notarized or Windows Authenticode-signed;
+> installation or first launch may show a security prompt. The default desktop
+> host needs a locally installed Qoder CLI 1.1.x and working account access.
 
-### [Digital&nbsp;Employee&nbsp;Quickstart](https://github.com/bytefolk/digital-employee-quickstart) — official examples
+[Get started](https://github.com/bytefolk/roleweave#get-started) · [Latest release](https://github.com/bytefolk/roleweave/releases/latest)
 
-**Release-pinned, credential-free starting point.** Try reusable employee
-packages for team Q&A, onboarding, approval proposals, and product support.
-Each case includes knowledge, Schemas, and offline acceptance fixtures.
+### Build from the terminal → [Digital Employee](https://github.com/bytefolk/digital-employee)
 
-[Try a case](https://github.com/bytefolk/digital-employee-quickstart#try-a-case-safely) · [Browse examples](https://github.com/bytefolk/digital-employee-quickstart#cases)
+Turn instructions, approved knowledge, and acceptance fixtures into reusable
+employee packages. Validate a package locally, then run it with a supported,
+configured Agent Host.
 
-### [Org&nbsp;Workbench](https://github.com/bytefolk/org-workbench) — local organization workspace
+**Start without credentials:** [run an official example](https://github.com/bytefolk/digital-employee-quickstart#try-a-case-safely).
+The quickstart pins a published CLI version and uses offline fixtures without
+a model call. It checks the package contract; running real tasks requires a
+configured AI host.
 
-**Development preview; no tagged installer release yet.** An Electron desktop
-workspace where the file tree is the org chart, with position-based local
-conversations, auditable organization changes, and local reporting.
+[CLI releases](https://github.com/bytefolk/digital-employee/releases/latest) · [Example library](https://github.com/bytefolk/digital-employee-quickstart#cases)
 
-[Current status and source setup](https://github.com/bytefolk/org-workbench) · [API contract](https://github.com/bytefolk/org-workbench/blob/main/docs/api-contract-v0.md)
+## Add the pieces you need
 
-### [Memory](https://github.com/bytefolk/mem) — portable memory plane
+Each project has its own setup guide and can be explored independently.
 
-**Experimental; a public release is available.** Keep files, structured
-memories, task checkpoints, and provenance under your control, with one core
-available through API, MCP, CLI, and UI.
+| Project | What it helps you do | Start here |
+| --- | --- | --- |
+| [mem](https://github.com/bytefolk/mem) | Keep files, memories, and task checkpoints with their sources. | [MCP binaries](https://github.com/bytefolk/mem/releases/latest) · [Service setup](https://github.com/bytefolk/mem/blob/main/docs/RUN_LOCAL.md) |
+| [doc](https://github.com/bytefolk/doc) | Write, share, and collaborate on documents with people and agents. | [Run locally](https://github.com/bytefolk/doc/blob/main/docs/RUN_LOCAL.md) |
+| [design-system](https://github.com/bytefolk/design-system) | Build consistent interfaces with shared tokens and components. | [Developer guide](https://github.com/bytefolk/design-system#develop-and-verify) |
 
-[Quick start](https://github.com/bytefolk/mem#快速开始) · [Latest release](https://github.com/bytefolk/mem/releases/latest) · [Product direction](https://github.com/bytefolk/mem/blob/main/GOAL.md)
+**Availability:** mem is experimental; its released MCP adapter needs a running
+mem service. Its web/API setup is documented in the repository. doc and
+design-system currently provide source setup guides and have no GitHub Releases.
 
-### [Docs](https://github.com/bytefolk/doc) — collaborative document plane
+[Ordane](https://github.com/bytefolk/ordane) hosts the source for a static marketing
+site. For the available desktop application, use RoleWeave above.
 
-**Experimental source preview; no tagged release yet.** Self-hosted documents
-for people and AI agents, with rich-text editing, real-time collaboration,
-sharing, version recovery, API access, and a CLI.
+## For developers and AI assistants
 
-[Run locally](https://github.com/bytefolk/doc/blob/main/docs/RUN_LOCAL.md) · [Capabilities](https://github.com/bytefolk/doc/blob/main/docs/CAPABILITIES.md) · [Product direction](https://github.com/bytefolk/doc/blob/main/GOAL.md)
+Use the repository that owns the capability you need:
 
-These projects can be explored independently. Cross-project integration is
-described as available only when the owning repositories provide release and
-verification evidence.
+- **Role packages and execution:** [Digital Employee CLI and contracts](https://github.com/bytefolk/digital-employee).
+- **Desktop workflows and local automation:** [RoleWeave API reference](https://github.com/bytefolk/roleweave/blob/main/docs/api-contract-v0.md).
+- **Files, memory, and retrieval:** [mem setup and interfaces](https://github.com/bytefolk/mem).
+- **Document editing and collaboration:** [doc capabilities](https://github.com/bytefolk/doc/blob/main/docs/CAPABILITIES.md).
 
-## For builders
+Check the installed version against its release notes before using an API or
+claiming support. Source on `main` can be ahead of a published package. Keep
+credentials in the configured service environment, outside prompts and
+committed files. Local workspace storage does not mean offline model execution:
+your configured AI host may send task content to its provider.
 
-### [Design&nbsp;System](https://github.com/bytefolk/design-system) — shared UI foundation
+## Build with us
 
-An experimental set of design tokens, accessible components, and application
-patterns for a consistent ByteFolk experience. It is available for source
-integration; no stable npm release is promised yet.
+- **Try it:** download RoleWeave or follow the CLI quickstart above.
+- **Report a problem:** open an issue in the project you used, with reproduction
+  steps and redacted output. Never include tokens or private workspace data.
+- **Contribute:** start with an issue, make a focused PR, and include reproducible
+  checks. Changes go through CI and independent review.
+- **Report a vulnerability:** use the affected repository's **Security** tab,
+  not a public issue.
 
-[Package guide](https://github.com/bytefolk/design-system#develop-and-verify) · [Design decisions](https://github.com/bytefolk/design-system/tree/main/docs/adr)
-
-## How we work
-
-- Start with a documented problem or outcome.
-- Make changes through issues and pull requests, with passing checks and
-  independent review.
-- Validate claims with reproducible evidence.
-- Prefer small, reviewable changes and transparent decisions.
-- Keep shipped capabilities, experimental work, and future direction clearly
-  separated.
-
-## Get involved
-
-- Start with the Digital Employee quickstart, or choose the product plane
-  closest to your goal and read its status and setup documentation.
-- Use the repository's issue templates for bugs, proposals, documentation,
-  maintenance, and questions.
-- Report vulnerabilities privately through the affected repository's
-  **Security** tab.
-
-Organization-wide policies:
-
-- [Contributing](https://github.com/bytefolk/.github/blob/main/CONTRIBUTING.md)
-- [Governance](https://github.com/bytefolk/.github/blob/main/GOVERNANCE.md)
-- [Security](https://github.com/bytefolk/.github/blob/main/SECURITY.md)
-- [Support](https://github.com/bytefolk/.github/blob/main/SUPPORT.md)
-- [Code of Conduct](https://github.com/bytefolk/.github/blob/main/CODE_OF_CONDUCT.md)
-
-A repository's local policy supplies project-specific instructions while
-preserving the organization baseline.
+[Contributing](https://github.com/bytefolk/.github/blob/main/CONTRIBUTING.md) · [Governance](https://github.com/bytefolk/.github/blob/main/GOVERNANCE.md) · [Security](https://github.com/bytefolk/.github/blob/main/SECURITY.md) · [Support](https://github.com/bytefolk/.github/blob/main/SUPPORT.md) · [Code of Conduct](https://github.com/bytefolk/.github/blob/main/CODE_OF_CONDUCT.md)
