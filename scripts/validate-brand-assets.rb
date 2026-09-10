@@ -3,10 +3,18 @@
 require "pathname"
 require "rexml/document"
 require "zlib"
+require "digest"
 
 ROOT = Pathname.new(File.expand_path("..", __dir__)).freeze
 ASSET_DIR = ROOT.join("brand", "bytefolk").freeze
-SVG_NAMES = %w[symbol.svg symbol-reversed.svg lockup.svg].freeze
+LEGACY_SVG_NAMES = %w[symbol.svg symbol-reversed.svg lockup.svg].freeze
+SOURCE_NAME = "bytefolk-concept-c-open-herd.svg"
+MARK_NAME = "bytefolk-concept-c-open-herd-mark.svg"
+SVG_NAMES = (LEGACY_SVG_NAMES + [SOURCE_NAME, MARK_NAME]).freeze
+# Issue #18 R2: preserve the owner's original source and approved rendered upload.
+SOURCE_SHA256 = "160c6f108e25d5f6d2a06ae68bd3cc11715f4580c0a0d9d02060d016a4526e49"
+AVATAR_SHA256 = "aefe9f3494bff30ff93809f929b04f709f5f36eedbfabdb5f5764efe78578461"
+PALETTE = { "--bf-blue" => "#1677ff", "--bf-purple" => "#722ed1", "--bf-ink" => "#141414", "--bf-paper" => "#ffffff" }.freeze
 PROHIBITED_ELEMENTS = %w[filter foreignObject image linearGradient radialGradient script].freeze
 CIRCULAR_SAFETY_MARGIN = 16.0
 INK_THRESHOLD = 250
@@ -14,6 +22,7 @@ INK_THRESHOLD = 250
 errors = []
 circular_metrics = nil
 geometry_signatures = {}
+documents = {}
 
 SVG_NAMES.each do |name|
   path = ASSET_DIR.join(name)
@@ -34,6 +43,7 @@ SVG_NAMES.each do |name|
     errors << "#{path.relative_path_from(ROOT)}: root element must be svg"
     next
   end
+  documents[name] = document
   errors << "#{path.relative_path_from(ROOT)}: viewBox must be present" if root.attributes["viewBox"].to_s.empty?
   %w[width height].each do |attribute|
     errors << "#{path.relative_path_from(ROOT)}: root #{attribute} is prohibited" if root.attributes[attribute]
@@ -51,6 +61,8 @@ SVG_NAMES.each do |name|
     end
   end
 
+  next unless LEGACY_SVG_NAMES.include?(name)
+
   symbol_group = REXML::XPath.first(document, "//*[starts-with(@id, 'bytefolk-symbol')]")
   if symbol_group
     child_geometry = symbol_group.elements.map do |element|
@@ -63,8 +75,33 @@ SVG_NAMES.each do |name|
   end
 end
 
-if geometry_signatures.length == SVG_NAMES.length && geometry_signatures.values.uniq.length != 1
+if geometry_signatures.length == LEGACY_SVG_NAMES.length && geometry_signatures.values.uniq.length != 1
   errors << "ByteFolk primary, reversed, and lockup symbol geometry must remain identical"
+end
+
+if documents[SOURCE_NAME] && documents[MARK_NAME]
+  unless Digest::SHA256.file(ASSET_DIR.join(SOURCE_NAME)).hexdigest == SOURCE_SHA256
+    errors << "#{SOURCE_NAME}: original Open Herd source must remain unchanged"
+  end
+  source_group = REXML::XPath.first(documents[SOURCE_NAME], "//*[@id='open-herd-mark']")
+  mark = documents[MARK_NAME].root
+  unless mark.attributes["viewBox"] == "0 0 142 116" &&
+         (mark.attributes.to_a.map(&:name) - %w[xmlns viewBox role aria-label]).empty?
+    errors << "#{MARK_NAME}: preserve the icon canvas and do not add root styling or transforms"
+  end
+  normalize = lambda do |element|
+    attributes = element.attributes.map do |key, value|
+      value = PALETTE.fetch(value[4...-1], value) if value.start_with?("var(")
+      value = "#ffffff" if value == "#fff"
+      [key, value]
+    end.sort
+    [element.name, attributes, element.elements.size]
+  end
+  source_geometry = source_group&.elements&.map { |element| normalize.call(element) }
+  icon_geometry = mark.elements.reject { |element| %w[title desc].include?(element.name) }.map { |element| normalize.call(element) }
+  unless source_geometry && icon_geometry == source_geometry
+    errors << "#{MARK_NAME}: icon geometry and palette must match the original group exactly, without text"
+  end
 end
 
 png_path = ASSET_DIR.join("avatar-1024.png")
@@ -72,6 +109,9 @@ if !png_path.file?
   errors << "#{png_path.relative_path_from(ROOT)}: missing"
 else
   bytes = png_path.binread
+  unless Digest::SHA256.hexdigest(bytes) == AVATAR_SHA256
+    errors << "#{png_path.relative_path_from(ROOT)}: does not match the approved R2 Open Herd upload"
+  end
   signature = "\x89PNG\r\n\x1A\n".b
   if bytes.byteslice(0, 8) != signature
     errors << "#{png_path.relative_path_from(ROOT)}: invalid PNG signature"
@@ -107,7 +147,7 @@ else
 
         if raw.bytesize == expected_size
           prior = Array.new(stride, 0)
-          pixels = []
+          colors = {}
           cursor = 0
           min_x = width
           min_y = height
@@ -147,11 +187,8 @@ else
             end
 
             row.each_slice(3).with_index do |(red, green, blue), x|
-              unless red == green && green == blue
-                errors << "#{png_path.relative_path_from(ROOT)}: avatar must remain grayscale"
-                break
-              end
-              next if red >= INK_THRESHOLD
+              colors[[red, green, blue]] = true
+              next if [red, green, blue].min >= INK_THRESHOLD
 
               min_x = [min_x, x].min
               min_y = [min_y, y].min
@@ -161,12 +198,13 @@ else
               max_ink_radius = [max_ink_radius, ink_radius].max
               outside_circle_ink += 1 if ink_radius > safe_radius
             end
-            pixels.concat(row)
             prior = row
           end
 
-          darkest = pixels.min
-          errors << "#{png_path.relative_path_from(ROOT)}: primary ink is not #141414" unless darkest == 20
+          PALETTE.each_value do |hex|
+            rgb = hex.delete_prefix("#").scan(/../).map { |channel| channel.to_i(16) }
+            errors << "#{png_path.relative_path_from(ROOT)}: missing source color #{hex}" unless colors[rgb]
+          end
           margins = [min_x, min_y, width - 1 - max_x, height - 1 - max_y]
           if max_x.negative? || margins.any? { |margin| margin < 100 }
             errors << "#{png_path.relative_path_from(ROOT)}: insufficient rectangular padding #{margins.inspect}"
